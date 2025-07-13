@@ -43,6 +43,7 @@ function playRound(humanChoice,computerChoice) {
 }
 
 
+
 const btn1 = document.createElement("button");
 
 btn1.textContent = "Rock";
@@ -74,16 +75,23 @@ btn3.addEventListener("click", function() {
     console.log(`Current Scores - You: ${humanScore}, Computer: ${computerScore}`);
     updateScoreDisplay(result,humanChoice, computerChoice);
 })
+  const btnContainer = document.getElementById("dynamicBtn");
 
-document.body.appendChild(btn1);
-document.body.appendChild(btn2);
-document.body.appendChild(btn3);
+dynamicBtn.appendChild(btn1);
+dynamicBtn.appendChild(btn2);
+dynamicBtn.appendChild(btn3);
+
+btn1.classList.add("rps-btn");
+btn2.classList.add("rps-btn");
+btn3.classList.add("rps-btn");
+
 
 const scoreText = document.createElement("p");
 scoreText.textContent = "Scores - You: 0, Computer: 0";
 document.body.appendChild(scoreText);
 
 const resultText = document.createElement("p");
+resultText.classList.add("result-text");
 document.body.appendChild(resultText);
 
 const resultDiv = document.createElement("div");
@@ -113,24 +121,4 @@ function disableButtons() {
 }
 
 
-// function playGame() {
-//     for (let i = 0; i < 5; i++) {
-//         const humanChoice = getHumanChoice();
-//          const computerChoice = getComputerChoice();
-//          playRound(humanChoice,computerChoice);
-//          console.log(`Current Scores - You: ${humanScore}, Computer: ${computerScore}`);
-//      }
-//      console.log("--- Final Results ---");
-//      console.log(`Your total score: ${humanScore}`);
-//      console.log(`Computer's total score: ${computerScore}`);
 
-//      if (humanScore > computerScore) {
-//          console.log("You win the game!");
-//      } else if (humanScore < computerScore) {
-//       console.log("You lose the game!");
-//    } else {
-//         console.log("The game is a tie!");
-//    }
-//  }
-
-// playGame()
