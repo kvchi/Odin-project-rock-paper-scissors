@@ -7,19 +7,17 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="game-container">
-    <h1>Rock Paper Scissors</h1>
-    <div class="buttons" id="buttons-container">
-      <h2 id="rock">🪨 Rock</h2>
-      <h2 id="paper">📄 Paper</h2>
-      <h2 id="scissors">✂️ Scissors</h2>
-    </div>
-
+  <h1>Rock Paper Scissors</h1>
+   <div class="choices">
     
-
-    <div id="final-message"></div>
+      <button onclick="playGame('rock')">🪨 Rock</button>
+      <button onclick="playGame('paper')">📄 Paper</button>
+      <button onclick="playGame('scissors')">✂️ Scissors</button> 
   </div>
-<div class="button-group" id="dynamicBtn"></div>
+
+  <div id="playerDisplay">PLAYER: </div>
+  <div id="computerDisplay">COMPUTER: </div>
+  <div id="resultDisplay"></div>
 
   <script src="index.js"></script>
 </body>
