@@ -42,14 +42,19 @@ h1 {
   font-size: 5rem;
 }
 
-.winText{
+.winText, #playerScoreDisplay{
   color: limegreen;
 }
 
-.loseText{
+.loseText, #computerScoreDisplay{
   color: tomato;
 }
 
 .tieText{
   color: thistle;
+}
+
+.scoreDisplay{
+  font-size: 2rem;
+  margin: 30px 0;
 }
